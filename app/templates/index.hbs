@@ -14,7 +14,7 @@
             </div>
             <div class="panel-footer todo-footer">
                 <div class="text-right"> 
-                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn btn-danger" {{action "deleteTodo"}} >Delete</button>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@
                     <button class="btn btn-default">Start</button>
                     <span class="text-right">
                         <button class="btn btn-info">Edit</button>
-                        <button class="btn btn-danger">Delete</button>
+                        <button class="btn btn-danger" {{action "deleteTodo" todo}} >Delete</button>
                     </span>
                 </div>
             </div>

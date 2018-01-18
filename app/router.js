@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('todo', function() {
     this.route('new');
   });
+  this.route('edit');
 });
 
 export default Router;
