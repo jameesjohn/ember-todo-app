@@ -1,6 +1,7 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
+    response: false,
     actions: {
         saveTodo(){
             let title = this.get('title');

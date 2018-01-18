@@ -13,62 +13,32 @@
                 The description of my todo
             </div>
             <div class="panel-footer todo-footer">
-                <div class="text-right">
+                <div class="text-right"> 
                     <button class="btn btn-danger">Delete</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="col-md-offset-1 col-md-5">
-        <div class="alert alert-info"><span><strong>Undone Todos</strong></span></div>
-        <div class="panel panel-primary"> 
-            <div class="panel-heading todo-title">
-                <span><strong>My first Todo</strong></span> 
-            </div>
-            <div class="panel-body todo-body">
-                The description of my todo
-            </div>
-            <div class="panel-footer todo-footer">
+        <div class="alert alert-info"><span><strong>Undone Todos</strong></span></div> 
+        {{#each model as |todo|}}
+            <div class="panel panel-primary">
+                <div class="panel-heading todo-title">
+                    <span>
+                        <strong>{{todo.title}}</strong>
+                    </span>
+                </div>
+                <div class="panel-body todo-body">
+                    {{todo.desc}}
+                </div>
+                <div class="panel-footer todo-footer">
                     <button class="btn btn-default">Start</button>
                     <span class="text-right">
                         <button class="btn btn-info">Edit</button>
                         <button class="btn btn-danger">Delete</button>
                     </span>
-            </div>
-        </div>
-        <div class="panel panel-primary">
-            <div class="panel-heading todo-title">
-                <span>
-                    <strong>My first Todo</strong>
-                </span>
-            </div>
-            <div class="panel-body todo-body">
-                The description of my todo
-            </div>
-            <div class="panel-footer todo-footer">
-                <div class="text-right">
-                    <button class="btn btn-info">Edit</button>
-                    <button class="btn btn-danger">Delete</button>
                 </div>
-        
             </div>
-        </div>
-        <div class="panel panel-primary">
-            <div class="panel-heading todo-title">
-                <span>
-                    <strong>My first Todo</strong>
-                </span>
-            </div>
-            <div class="panel-body todo-body">
-                The description of my todo
-            </div>
-            <div class="panel-footer todo-footer">
-                <div class="text-right">
-                    <button class="btn btn-info">Edit</button>
-                    <button class="btn btn-danger">Delete</button>
-                </div>
-        
-            </div>
-        </div>
+        {{/each}}
     </div>
 </div>
