@@ -7,6 +7,19 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase:{
+      apiKey: "AIzaSyBPYB-vCUYC_WBYUOLtI7_u-5eqq8Dwhog",
+      authDomain: "ember-todoapp.firebaseapp.com",
+      databaseURL: "https://ember-todoapp.firebaseio.com",
+      projectId: "ember-todoapp",
+      storageBucket: "ember-todoapp.appspot.com",  
+    },
+    // if using ember-cli-content-security-policy
+    contentSecurityPolicy: {
+      'script-src' : "'self' 'unsafe-eval' apis.google.com",
+      'frame-src'  : "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

@@ -1,0 +1,11 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            {{#link-to 'index' class="navbar-brand"}}Todo App{{/link-to}}
+        </div>
+        <ul class="nav navbar-nav">
+            {{#link-to "index" tagName="li"}}<a href="/">Home</a>{{/link-to}}
+            {{#link-to "todo.new" tagName="li"}}<a href="/todo/new">New Todo</a>{{/link-to}}
+        </ul>
+    </div>
+</nav>

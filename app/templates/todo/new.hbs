@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-offset-1 col-md-6">
+        <form role="form">
+            <div class="form-group">
+                <label for="title">Title of Todo</label>
+                {{input type="text" class="form-control" placeholder="Enter a title for this todo" value=title}}
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                {{textarea value=desc class="form-control" placeholder="enter a suitable description for this todo"}}
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success" {{action "saveTodo"}}>Create</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+        {{#if response}}
+            <div class="alert alert-success">
+                Todo Created
+            </div>
+        {{/if}}
+    </div>
+</div>
