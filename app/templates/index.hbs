@@ -32,7 +32,7 @@
                     {{todo.desc}}
                 </div>
                 <div class="panel-footer todo-footer">
-                    <button class="btn btn-default">Start</button>
+                    <button class="btn btn-default" {{action "startTodo" todo}}>Start</button>
                     <span class="text-right">
                         <button class="btn btn-info">Edit</button>
                         <button class="btn btn-danger" {{action "deleteTodo" todo}} >Delete</button>

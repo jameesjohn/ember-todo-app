@@ -8,6 +8,13 @@ export default Controller.extend({
             if (conf) {
                 todo.destroyRecord();
             }
+        },
+        startTodo(task){
+            let id = task.get('id')
+            this.get('store').findRecord('todo', id).then(function(e){
+                e.set('started', true);
+                e.save();
+            })
         }
     }
 });
