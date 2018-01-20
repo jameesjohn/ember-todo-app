@@ -3,14 +3,14 @@
         <form role="form">
             <div class="form-group">
                 <label for="title">Title of Todo</label>
-                {{input type="text" class="form-control" placeholder="Enter a title for this todo" value=title}}
+                {{input type="text" class="form-control" placeholder="Enter a title for this todo" value=model.title}}
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                {{textarea value=desc class="form-control" placeholder="Enter a suitable description for this todo"}}
+                {{textarea value=model.desc class="form-control" placeholder="Enter a suitable description for this todo"}}
             </div>
             <div class="form-group">
-                <button class="btn btn-success" {{action "saveTodo"}}>Create</button>
+                <button class="btn btn-success" {{action "saveChanges" model}}>Save Changes</button>
             </div>
         </form>
         {{#if response}}
@@ -24,11 +24,11 @@
         <div class="panel panel-primary">
             <div class="panel-heading todo-title">
                 <span>
-                    <strong>Title: <em>{{title}}</em></strong>
+                    <strong>Title: <em>{{model.title}}</em></strong>
                 </span>
             </div>
             <div class="panel-body todo-body">
-                <strong>Description:</strong><br>{{desc}}
+                <strong>Description:</strong><br>{{model.desc}}
             </div>
             
         </div>
