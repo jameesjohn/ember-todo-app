@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('todo', function() {
     this.route('new');
   });
-  this.route('edit');
+  this.route('edit', {path: '/:todo_id/edit'});
 });
 
 export default Router;
