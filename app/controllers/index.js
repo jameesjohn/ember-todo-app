@@ -10,11 +10,20 @@ export default Controller.extend({
             }
         },
         startTodo(task){
-            let id = task.get('id')
+            let id = task.get('id');
             this.get('store').findRecord('todo', id).then(function(e){
                 e.set('started', true);
                 e.save();
-            })
+            });
+        },
+        finishTodo(task){
+            let id = task.get('id');
+            this.get('store').findRecord('todo', id).then(function(e){
+                e.set('compl', true);
+                e.save();
+                alert('Successfully completed '+ e.get('title'));
+            });
+            
         }
     }
 });
