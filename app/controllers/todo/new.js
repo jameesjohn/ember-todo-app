@@ -7,9 +7,9 @@ export default Controller.extend({
             let title = this.get('title');
             let desc = this.get('desc');
             this.set('response', true);
-
+ 
             const newTodo = this.store.createRecord('todo', {title: title, desc:desc});
-            newTodo.save();
+            newTodo.save().then(this.transitionToRoute('index'));
         }
     }
 });
